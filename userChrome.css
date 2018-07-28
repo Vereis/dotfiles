@@ -1,0 +1,108 @@
+@import url('file:///home/chris/.cache/wal/colors.css');
+
+:root {
+	--tabs-border-color: rgba(0, 0, 0, 0) !important;
+	--toolbox-border-bottom-color: rgba(0, 0, 0, 0) !important;
+
+    --custom-bar-height: 40px !important;
+}
+
+#navigator-toolbox {
+	background-color: var(--background) !important;
+    padding-bottom: 1px !important;
+}
+
+#TabsToolbar {
+	background-color: var(--background) !important;
+    height: var(--custom-bar-height) !important;
+    margin-top: -2px !important;
+    padding: 0 7px !important;
+}
+
+#TabsToolbar .tab-content {
+	color: var(--color1) !important;
+}
+
+#TabsToolbar .tab-text {
+	text-align: center !important;
+	-moz-box-flex: 1 !important;
+    padding-top: 2px !important;
+}
+
+#TabsToolbar .tab-icon-image,
+#TabsToolbar .tab-close-button,
+#TabsToolbar .tab-loading-burst,
+#TabsToolbar .tab-throbber,
+#TabsToolbar .tab-line,
+.tabs-newtab-button {
+	display: none !important;
+}
+
+#TabsToolbar .tabbrowser-tab {
+	color: transparent !important;
+}
+
+#TabsToolbar .tabbrowser-tab:after {
+    display: none !important;
+}
+
+#TabsToolbar .tabbrowser-tab .tab-background {
+    display: none !important;
+}
+
+#TabsToolbar .tabbrowser-tab .tab-content[selected=true] {
+	color: var(--foreground) !important;
+}
+
+#nav-bar {
+	position: fixed !important;
+	bottom: 0 !important;
+	width: 100% !important;
+	background-color: var(--background) !important;
+    height: var(--custom-bar-height) !important;
+}
+
+#nav-bar #urlbar-container {
+	width: calc(100vw - 4px) !important;
+	padding: 2px 0;
+}
+
+#nav-bar #urlbar {
+	background-color: transparent !important;
+	color: var(--foreground) !important;
+	border: none !important;
+}
+
+#nav-bar #identity-box {
+	border: none !important;
+}
+
+#nav-bar #identity-box #connection-icon,
+#nav-bar .toolbarbutton-1,
+#nav-bar #urlbar .urlbar-icon {
+	display: none !important;
+}
+
+#page-action-buttons {
+    display: none;
+}
+
+#nav-bar #identity-box #identity-icon {
+	opacity: 1 !important;
+}
+
+#content-deck {
+	padding-bottom: var(--custom-bar-height) !important;
+	background-color: pink !important;
+}
+
+[inFullscreen="true"] + * + #content-deck {
+	padding-bottom: 0 !important;
+	background-color: yellow !important;
+}
+
+#PopupAutoCompleteRichResult {
+    position: relative;
+    height: 308px !important;
+    margin-top: calc(-308px - var(--custom-bar-height)) !important;
+}

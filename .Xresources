@@ -1,0 +1,84 @@
+! Cursor settings ------------------------------------------------------
+Xcursor.theme: win8
+
+! Xft settings ---------------------------------------------------------
+Xft.autohint:   0
+Xft.dpi:        100
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.lcdfilter:  lcddefault
+
+! URxvt settings -------------------------------------------------------
+urxvt.geometry: 110x30
+urxvt.internalBorder: 32
+urxvt.depth: 32
+
+urxvt*title: urxvt
+urxvt*shading: 99
+urxvt*cursorBlink: true
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt*skipBuiltinGlyphs: true
+
+urxvt*externalBorder: 0
+
+! Fonts ----------------------------------------------------------------
+urxvt*font: xft:terminus:size=8
+urxvt*boldFont: xft:terminus:size=8
+
+! Scrollbar ------------------------------------------------------------
+urxvt*scrollBar: false
+urxvt*thickness: 0
+urxvt*scrollColor: #333333
+urxvt*scrollBar_floating: true
+urxvt*scrollBar_right: true
+urxvt*scrollstyle: plain
+
+! Cursor Movement -----------------------------------------------------
+URxvt*altSendsEscape: true
+URxvt.keysym.Control-Up:   \033[1;5A
+URxvt.keysym.Control-Down:    \033[1;5B
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
+! special
+*.foreground:   #f8f8f2
+*.background:   #272825
+*.cursorColor:  #f8f8f2
+
+! black
+*.color0:       #303030
+*.color8:       #525252
+
+! red
+*.color1:       #cf6a4c
+*.color9:       #ff9d80
+
+! green
+*.color2:       #97fa7a
+*.color10:      #c7ffbf
+
+! yellow
+*.color3:       #fad07a
+*.color11:      #ffefbf
+
+! blue
+*.color4:       #8197bf
+*.color12:      #accaff
+
+! magenta
+*.color5:       #8787af
+*.color13:      #c4c4ff
+
+! cyan
+*.color6:       #668799
+*.color14:      #80bfaf
+
+! white
+*.color7:       #888888
+*.color15:      #e8e8d3
+
+! Set depth to make transparency work.
+URxvt*depth: 32
