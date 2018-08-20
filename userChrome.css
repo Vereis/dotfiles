@@ -20,7 +20,12 @@
 }
 
 #TabsToolbar .tab-content {
-	color: var(--color1) !important;
+	color: var(--foreground) !important;
+    opacity: 0.75 !important;
+}
+
+#TabsToolbar .titlebar-placeholder {
+    display: none !important;
 }
 
 #TabsToolbar .tab-text {
@@ -52,6 +57,7 @@
 
 #TabsToolbar .tabbrowser-tab .tab-content[selected=true] {
 	color: var(--foreground) !important;
+    opacity: 1 !important;
 }
 
 #nav-bar {
@@ -63,12 +69,13 @@
 }
 
 #nav-bar #urlbar-container {
+	background-color: var(--background) !important;
 	width: calc(100vw - 4px) !important;
 	padding: 2px 0;
 }
 
 #nav-bar #urlbar {
-	background-color: transparent !important;
+	background-color: var(--background) !important;
 	color: var(--foreground) !important;
 	border: none !important;
 }
