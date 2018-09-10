@@ -56,6 +56,12 @@ inoremap <Down> <C-o>gj
 set path+=**
 set wildmenu
 
+" Ctags
+set tags=./.tags;/
+nnoremap <C-Space><Return> <C-]>
+nnoremap <C-Space><BS> <C-t>
+nnoremap <C-Space><C-Space> :silent !ctags -f .tags -a -R .<return><return><C-l>
+
 " Autocompletion
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
