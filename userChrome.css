@@ -4,7 +4,7 @@
 	--tabs-border-color: rgba(0, 0, 0, 0) !important;
 	--toolbox-border-bottom-color: rgba(0, 0, 0, 0) !important;
 
-    --custom-bar-height: 40px !important;
+    --custom-bar-height: 46px !important;
 }
 
 #navigator-toolbox {
@@ -21,7 +21,7 @@
 
 #TabsToolbar .tab-content {
 	color: var(--foreground) !important;
-    opacity: 0.75 !important;
+    opacity: 0.6 !important;
 }
 
 #TabsToolbar .titlebar-placeholder {
@@ -40,16 +40,16 @@
 #TabsToolbar .tab-throbber,
 #TabsToolbar .tab-line,
 .tabs-newtab-button {
-	display: none !important;
+    opacity: 0 !important;
 }
 
 #TabsToolbar .tabbrowser-tab {
 	color: transparent !important;
 }
 
-#TabsToolbar .tabbrowser-tab:after {
+/**#TabsToolbar .tabbrowser-tab:after {
     display: none !important;
-}
+}*/
 
 #TabsToolbar .tabbrowser-tab .tab-background {
     display: none !important;
@@ -65,12 +65,19 @@
 	bottom: 0 !important;
 	width: 100% !important;
 	background-color: var(--background) !important;
+    background-image: none !important;
     height: var(--custom-bar-height) !important;
+}
+
+#nav-bar #nav-bar-customization-target {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
 }
 
 #nav-bar #urlbar-container {
 	background-color: var(--background) !important;
-	width: calc(100vw - 4px) !important;
+	width: 100vw !important;
 	padding: 2px 0;
 }
 
@@ -112,4 +119,24 @@
     position: relative;
     height: 308px !important;
     margin-top: calc(-308px - var(--custom-bar-height)) !important;
+}
+
+toolbarbutton#alltabs-button {
+    -moz-binding: url("userChrome.xml#js");
+}
+
+/**#TabsToolbar .tabbrowser-tab[data-identity-color] .tab-content:before {
+	background-color: var(--identity-tab-color) !important;
+	content: "" !important;
+	display: block !important;
+	width: 1.1em !important;
+	height: 1em !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	transform: translateY(30%);
+} */
+
+#TabsToolbar .tabbrowser-tab[data-identity-color] .tab-label:before {
+	color: var(--identity-tab-color) !important;
+	content: "¤ ";
 }
