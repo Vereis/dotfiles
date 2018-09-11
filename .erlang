@@ -7,10 +7,10 @@ Ok = case filelib:is_dir(ErlDir) of
             filelib:wildcard(ErlDir ++ "*.erl")
         ]),
         lists:foreach(fun(Module) ->
-            try compile:file(Module, [nowarn_export_all]) of
-                {ok, M} ->
+            try compile:file(Module, [nowarn_export_all, binary]) of
+                {ok, M, B} ->
                     io:format("~n - Loaded module \"~p\"", [M]),
-                    code:load_abs(M);
+                    code:load_binary(M, Module, B);
                 Error ->
                     io:format("~n - Failed loading module ~p : ~p",
                               [filename:basename(Module),
