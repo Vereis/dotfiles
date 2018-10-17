@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[push]
+    default = current
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Chris Bailey
+#	email = chris.bailey@erlang-solutions.com
+	email = Chris.bailey@erlang-solutions.com
+	name = cbaileyesl
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[core]
+	excludesfile = /Users/chrisbailey/.gitignore
