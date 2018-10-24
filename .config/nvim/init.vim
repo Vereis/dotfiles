@@ -8,13 +8,18 @@ Plugin 'VundleVim/Vundle.vim'
 
 " General stuff
 Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+Plugin 'jistr/vim-nerdtree-tabs'
+
 Plugin 'Shougo/deoplete.nvim'
+
 Plugin 'easymotion/vim-easymotion'
+
+Plugin 'majutsushi/tagbar'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Erlang plugins
 Plugin 'vim-erlang/vim-erlang-tags'
-Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'vim-erlang/vim-erlang-omnicomplete'
 
 " Elixir plugins
 Plugin 'elixir-editors/vim-elixir'
@@ -71,10 +76,8 @@ command! W w
 
 " Line breaking
 set wrap linebreak nolist
-noremap k gk
-noremap j gj
-inoremap k <C-o>gk
-inoremap j <C-o>gj
+nnoremap k gk
+nnoremap j gj
 
 noremap <Up> gk
 noremap <Down> gj
@@ -126,7 +129,7 @@ let g:mix_format_on_save = 1
 let g:alchemist_tag_disable = 1
 
 " NERDTREE toggle (normal mode)
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeTabsToggle<CR>
 
 " Close VIM if NERDTREE is only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
