@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 " General stuff
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'Shougo/deoplete.nvim'
 
@@ -16,6 +17,14 @@ Plugin 'easymotion/vim-easymotion'
 
 Plugin 'majutsushi/tagbar'
 Plugin 'ludovicchabant/vim-gutentags'
+
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Git plugins
+Plugin 'tpope/vim-fugitive'
 
 " Erlang plugins
 Plugin 'vim-erlang/vim-erlang-tags'
@@ -131,5 +140,22 @@ let g:alchemist_tag_disable = 1
 " NERDTREE toggle (normal mode)
 nnoremap <C-n> :NERDTreeTabsToggle<CR>
 
+" NERDTREE git symbols
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "M",
+    \ "Staged"    : "S",
+    \ "Untracked" : "%",
+    \ "Renamed"   : "R",
+    \ "Unmerged"  : "*",
+    \ "Deleted"   : "D",
+    \ "Dirty"     : "m",
+    \ "Clean"     : "",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
 " Close VIM if NERDTREE is only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" CTRLP ignore .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
