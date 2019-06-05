@@ -23,6 +23,8 @@ Plugin 'tpope/vim-repeat'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'machakann/vim-swap'
+
 " Git plugins
 Plugin 'tpope/vim-fugitive'
 
@@ -35,8 +37,17 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'mhinz/vim-mix-format'
 Plugin 'slashmili/alchemist.vim'
 
+" Handlebar Templates
+Plugin 'mustache/vim-mustache-handlebars'
+
 call vundle#end()
 filetype plugin indent on 
+
+" Don't redraw buffer during macro
+set lazyredraw
+
+" Cache undos in a file
+set undofile
 
 " Tab Settings
 set tabstop=4
@@ -159,3 +170,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " CTRLP ignore .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" Easymotion setup
+let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-overwin-f)

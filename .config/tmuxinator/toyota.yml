@@ -1,0 +1,56 @@
+name: toyota
+root: /code/esl/toyota
+
+# Project hooks
+# Runs on project start, always
+on_project_first_start: cd /code/esl/toyota/mspf-dev; docker-compose up -d zookeeper redis postgres kafka; sleep 5
+on_project_stop: cd /code/esl/toyota/mspf-dev; docker-compose down
+
+windows:
+    - tcna_deps:
+        layout: main-vertical
+        panes:
+            - docker:
+                - cd /code/esl/toyota/mspf-dev
+                - docker-compose up
+            - core:
+                - tmux wait-for -L core
+                - cd /code/esl/toyota/mspf-core
+                - git pull
+                - mix do deps.get, ecto.drop, ecto.create, ecto.migrate; tmux wait-for -U core; iex -S mix
+            - viking:
+                - sleep 5
+                - tmux wait-for -L core
+                - tmux wait-for -L viking
+                - sleep 3
+                - cd /code/esl/toyota/mspf-viking
+                - git pull
+                - mix do deps.get, ecto.reset, ecto.setup_core; tmux wait-for -U core; tmux wait-for -U viking; iex -S mix phx.server
+    - workspace:
+        layout: tiled
+        panes:
+            - yuko_shell:
+                - sleep 8
+                - tmux wait-for -L core
+                - tmux wait-for -L viking
+                - tmux wait-for -L sabacc
+                - tmux wait-for -L yuko
+                - sleep 3
+                - cd /code/esl/toyota/mspf-yuko
+                - git pull
+                - mix do deps.get, ecto.drop, ecto.create, ecto.migrate
+                - MIX_ENV=test mix do ecto.drop, ecto.create, ecto.migrate; tmux wait-for -U core; tmux wait-for -U viking; tmux wait-for -U sabacc; tmux wait-for -U yuko; iex -S mix phx.server
+            - sabacc_shell:
+                - cd /code/esl/toyota/mspf-sabacc
+                - git pull
+                - mix do deps.get, ecto.drop, ecto.create, ecto.migrate; iex -S mix phx.server
+            - yuko_editor:
+                - cd /code/esl/toyota/mspf-yuko
+                - vim
+            - sabacc_editor:
+                - cd /code/esl/toyota/mspf-sabacc
+                - vim
+    - scratchpad:
+        layout: tiled
+        panes:
+            - editor: vim
