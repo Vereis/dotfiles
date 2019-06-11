@@ -32,7 +32,10 @@ let mapleader=" "
 " Syntax color
 syntax on
 set background=dark
-colorscheme PaperColor
+
+" Set theme and prevent theme from changing BG color
+au ColorScheme * hi Normal ctermbg=None
+colorscheme Tomorrow-Night
 
 " Better searching functionality
 set showmatch

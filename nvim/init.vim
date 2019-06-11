@@ -45,6 +45,9 @@ Plug 'slashmili/alchemist.vim'   , { 'for': 'elixir' }
 " Handlebar Templates
 Plug 'mustache/vim-mustache-handlebars' , { 'for': 'html' }
 
+" Bunch of nice themes
+Plug 'flazz/vim-colorschemes'
+
 call plug#end()
 
 
