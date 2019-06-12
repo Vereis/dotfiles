@@ -18,6 +18,3 @@ let g:mix_format_on_save = 1
 
 " Don't use alchemist.vim's ctag like functionality as I'm using ctags
 let g:alchemist_tag_disable = 1
-
-" CTRLP ignore .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']

@@ -6,29 +6,24 @@ call plug#begin('~/.config/nvim/bundle')
 " General stuff
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-
 Plug 'easymotion/vim-easymotion'
-
 Plug 'majutsushi/tagbar'
-
 Plug 'ludovicchabant/vim-gutentags'
-
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
-
 Plug 'itchyny/lightline.vim'
-
-Plug 'ctrlpvim/ctrlp.vim'
-
 Plug 'machakann/vim-swap'
 
-Plug 'airblade/vim-gitgutter'
+" Setup fzf
+Plug '/usr/local/opt/fzf'
+Plug '~/.fzf'
+Plug 'junegunn/fzf.vim'
 
 " Git plugins
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " Erlang plugins
