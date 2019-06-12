@@ -2,7 +2,8 @@
   "languageserver": {
     "elixirLS": {
       "command": "/Users/chrisbailey/.config/nvim/language_servers/elixir/language_server.sh",
-      "filetypes": ["elixir", "eelixir"]
+      "filetypes": ["elixir", "eelixir"],
+      "dialyzerEnabled": false
     }
   }
 }
