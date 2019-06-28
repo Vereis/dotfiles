@@ -1,2 +1,2 @@
-nmap <C-p> :GitFiles<CR>
-nmap <leader><C-p> :Files<CR>
+nmap <C-p> :Files<CR>
+nmap <leader><C-p> :GitFiles<CR>
