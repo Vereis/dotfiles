@@ -13,7 +13,6 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
-Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-swap'
 
 " Setup fzf
