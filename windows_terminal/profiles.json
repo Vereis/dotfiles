@@ -47,7 +47,7 @@
          "acrylicOpacity":0,
          "background":"#111111",
          "closeOnExit":true,
-         "colorScheme":"Monokai Soda",
+         "colorScheme":"Jellybeans",
          "commandline":"ubuntu.exe",
          "cursorColor":"#c7dde0",
          "cursorShape":"filledBox",
@@ -84,6 +84,27 @@
          "brightWhite":"#f6f6ef",
          "background":"#1a1a1a",
          "foreground":"#c4c5b5"
+      },
+      {
+        "name": "Jellybeans",
+        "black": "#929292",
+        "red": "#e27373",
+        "green": "#94b979",
+        "yellow": "#ffba7b",
+        "blue": "#97bedc",
+        "purple": "#e1c0fa",
+        "cyan": "#00988e",
+        "white": "#dedede",
+        "brightBlack": "#bdbdbd",
+        "brightRed": "#ffa1a1",
+        "brightGreen": "#bddeab",
+        "brightYellow": "#ffdca0",
+        "brightBlue": "#b1d8f6",
+        "brightPurple": "#fbdaff",
+        "brightCyan": "#1ab2a8",
+        "brightWhite": "#ffffff",
+        "background": "#121212",
+        "foreground": "#dedede"
       }
    ]
 }

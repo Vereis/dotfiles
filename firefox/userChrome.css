@@ -3,14 +3,11 @@
 
   --foreground-color: #dddddd;
 
-  --selected-tab-background-color: #333333;
-  --selected-tab-foreground-color: #aaaaaa;
-
+  --border-width: 1px;
   --bar-height: 46px;
   --urlbar-results-height: 220px;
 
-  --min-tab-width: 3em;
-  --max-tab-width: 10em;
+  --tab-seperator-color: #444444;
 
   /*
    * Even though there dynamic calculation of
@@ -28,7 +25,6 @@
   font-size: 16px !important;
   font-smooth: never;
   text-rendering: geometricPrecision;
-
 }
 
 
@@ -43,7 +39,7 @@
   background-color: var(--background-color);
   color: var(--foreground-color);
   border-bottom: 0 !important;
-  padding-left: 1px;
+  padding-left: var(--border-width) !important;
 }
 
 #titlebar,
@@ -65,16 +61,31 @@
   border: none;
 }
 
-.tabbrowser-tab .tab-background-inner,
-.tabbrowser-tab .tab-text {
-  background-color: var(--background-color) !important;
-  color: var(--foreground-color) !important;
-  opacity: 0.8 !important;
+.tabbrowser-tab {
+  border-right: 1px solid var(--tab-seperator-color) !important;
 }
 
-.tabbrowser-tab[selected=true] .tab-background-inner,
+.tabbrowser-tab .tab-background-inner,
+.tabbrowser-tab .tab-background,
+.tabbrowser-tab .tab-text {
+  background-image: none !important;
+  color: var(--foreground-color) !important;
+}
+
+.tabbrowser-tab:hover .tab-background-inner {
+  background-color: var(--background-color);
+}
+
+.tabbrowser-tab .tab-text {
+  opacity: 0.6;
+}
+
+.tabbrowser-tab:hover .tab-text {
+  opacity: 0.8;
+}
+
 .tabbrowser-tab[selected=true] .tab-text {
-  opacity: 1 !important;
+  opacity: 1.0;
 }
 
 .tabs-newtab-button,
@@ -83,7 +94,6 @@
 .tab-bottom-line,
 .tab-loading-burst,
 .tab-throbber,
-.tab-close-button,
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
   display:none !important;
@@ -117,8 +127,8 @@
  * fullscreen video renders properly
  * */
 #browser {
-  border-left: 1px solid var(--background-color);
-  border-right: 1px solid var(--background-color);
+  border-left: var(--border-width) solid var(--background-color);
+  border-right: var(--border-width) solid var(--background-color);
 	padding-bottom: var(--bar-height) !important;
 }
 
@@ -154,14 +164,14 @@
 #tracking-potection-icon-box,
 #identity-icon,
 #connection-icon,
-.urlbar-history-dropmarker,
-#page-action-buttons {
+#page-action-buttons,
+.urlbar-history-dropmarker {
   display: none;
 }
 
 #urlbar-results {
   position: relative !important;
-  border: 1px solid var(--background-color) !important;
+  border: var(--border-width) solid var(--background-color) !important;
   width: calc(100% - 6px) !important;
   bottom: var(--bar-height) !important;
   max-height: var(--urlbar-results-height) !important;
