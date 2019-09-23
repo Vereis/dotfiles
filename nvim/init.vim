@@ -34,7 +34,6 @@ Plug 'vim-erlang/vim-erlang-runtime'      , { 'for': 'erlang' }
 " Elixir plugins
 Plug 'elixir-editors/vim-elixir' , { 'for': 'elixir' }
 Plug 'mhinz/vim-mix-format'      , { 'for': 'elixir' }
-Plug 'slashmili/alchemist.vim'   , { 'for': 'elixir' }
 
 " Handlebar Templates
 Plug 'mustache/vim-mustache-handlebars' , { 'for': 'html' }

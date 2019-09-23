@@ -12,6 +12,3 @@ au BufNewFile,BufRead *.ex,*.exs,*.eex call LoadElixirSettings()
 
 " Mix format on save
 let g:mix_format_on_save = 1
-
-" Don't use alchemist.vim's ctag like functionality as I'm using ctags
-let g:alchemist_tag_disable = 1
