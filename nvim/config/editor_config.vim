@@ -13,11 +13,9 @@ set expandtab
 set autoindent
 
 " Copy to clipboard instead of vim text buffer
+set clipboard=unnamedplus
 if has('win32')
     set clipboard=unnamed
-endif
-if has('unix')
-    set clipboard=unnamedplus
 endif
 
 " Relative line numbers
@@ -35,7 +33,7 @@ set background=dark
 
 " Set theme and prevent theme from changing BG color
 au ColorScheme * hi Normal ctermbg=None
-colorscheme Tomorrow-Night
+colorscheme monokain
 
 " Better searching functionality
 set showmatch
