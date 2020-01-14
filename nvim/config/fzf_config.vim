@@ -1,2 +1,4 @@
-nmap <C-p> :Files<CR>
-nmap <leader><C-p> :GitFiles<CR>
+" Jump to split/tab if possible
+let g:fzf_buffers_jump = 1
+
+nmap <C-p> :Rg<CR>

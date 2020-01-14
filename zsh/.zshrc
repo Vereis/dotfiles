@@ -5,10 +5,17 @@ fi
 alias vi=nvim
 alias vim=nvim
 
-XURL=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
-# export DISPLAY=$XURL:0.0
+WSL_HOST=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
+export WSL_HOST=$WSL_HOST
+export DISPLAY=$WSL_HOST:0.0
+# export DISPLAY=:0.0
+
+export PATH="$PATH:$HOME/.local/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 . $HOME/.asdf/asdf.sh
 
