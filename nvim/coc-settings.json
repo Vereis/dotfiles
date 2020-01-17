@@ -1,4 +1,5 @@
 {
+  "codeLens.enable": true,
   "languageserver": {
     "elixirLS": {
       "command": "/home/chris/.config/nvim/language_servers/elixir/language_server.sh",
