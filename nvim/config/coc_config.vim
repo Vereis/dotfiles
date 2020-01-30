@@ -85,5 +85,6 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-ember',
   \ 'coc-spell-checker',
-  \ 'coc-markdownlint'
+  \ 'coc-markdownlint',
+  \ 'coc-tslint-plugin'
 \ ]

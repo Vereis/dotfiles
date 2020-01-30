@@ -9,6 +9,7 @@ WSL_HOST=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
 export WSL_HOST=$WSL_HOST
 export DISPLAY=$WSL_HOST:0.0
 # export DISPLAY=:0.0
+export LIBGL_ALWAYS_INDIRECT=1
 
 export PATH="$PATH:$HOME/.local/bin"
 

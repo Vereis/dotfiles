@@ -6,5 +6,8 @@
       "filetypes": ["elixir", "eelixir"],
       "dialyzerEnabled": false
     }
-  }
+  },
+  "tslint.jsEnable": true,
+  "tslint.autoFixOnSave": true,
+  "javascript.format.enabled": true
 }
