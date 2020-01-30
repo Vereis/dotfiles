@@ -74,3 +74,16 @@ set cmdheight=2
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Always have the following plugins (and updated)
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-css',
+  \ 'coc-json',
+  \ 'coc-html',
+  \ 'coc-vimlsp',
+  \ 'coc-highlight',
+  \ 'coc-ember',
+  \ 'coc-spell-checker',
+  \ 'coc-markdownlint'
+\ ]
