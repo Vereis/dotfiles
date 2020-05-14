@@ -15,6 +15,10 @@ Plug 'tpope/vim-eunuch'
 Plug 'machakann/vim-swap'
 Plug 'sheerun/vim-polyglot'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 " Setup fzf
 Plug '/usr/local/opt/fzf'
 Plug '~/.fzf'
