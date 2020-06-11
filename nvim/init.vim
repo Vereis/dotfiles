@@ -42,6 +42,9 @@ Plug 'mhinz/vim-mix-format'      , { 'for': 'elixir' }
 " Handlebar Templates
 Plug 'mustache/vim-mustache-handlebars' , { 'for': 'html' }
 
+" SCSS syntax highlighting
+Plug 'cakebaker/scss-syntax.vim' , { 'for': 'scss' }
+
 " Bunch of nice themes
 Plug 'flazz/vim-colorschemes'
 

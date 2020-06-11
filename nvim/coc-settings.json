@@ -7,7 +7,12 @@
       "dialyzerEnabled": false
     }
   },
+  "css.enable": true,
+  "scss.validate": true,
   "tslint.jsEnable": true,
   "tslint.autoFixOnSave": true,
-  "javascript.format.enabled": true
+  "javascript.format.enabled": true,
+  "diagnostic.errorSign": "💀",
+  "diagnostic.warningSign": "👎"
 }
+
