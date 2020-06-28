@@ -8,13 +8,18 @@ if !exists('g:config_dir')
   let g:config_dir='~/.config/nvim'
 endif
 
+if !exists('g:plugin_dir')
+  let g:config_dir='~/.dotfiles/nvim/bundle'
+endif
+
 execute "set rtp^=" . g:config_dir
+execute "set rtp^=" . g:plugin_dir
 
 " ===============================================
 " # Configure Plug + Plugins               
 " ===============================================
 
-call plug#begin(g:config_dir . '/bundle')
+call plug#begin(g:plugin_dir)
 
 " General stuff
 Plug 'scrooloose/nerdtree'
