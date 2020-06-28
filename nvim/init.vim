@@ -1,7 +1,20 @@
 " ===============================================
+" # Env Init
+" ===============================================
+
+" Check nixos configs defined in vereis/nixos/home.nix
+" to see where 'g:config_dir' is usually set
+if !exists('g:config_dir')
+  let g:config_dir='~/.config/nvim'
+endif
+
+execute "set rtp^=" . g:config_dir
+
+" ===============================================
 " # Configure Plug + Plugins               
 " ===============================================
-call plug#begin('~/.config/nvim/bundle')
+
+call plug#begin(g:config_dir . '/bundle')
 
 " General stuff
 Plug 'scrooloose/nerdtree'
@@ -54,7 +67,7 @@ call plug#end()
 " ===============================================
 " # Load all additional configuration files
 " ===============================================
-for config in split(glob('~/.config/nvim/config/*.vim'), '\n')
+for config in split(glob(g:config_dir . '/config/*.vim'), '\n')
   exe 'source' config
 endfor
 
