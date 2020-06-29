@@ -25,22 +25,17 @@ call plug#begin(g:plugin_dir)
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
-Plug 'majutsushi/tagbar'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-endwise'
 Plug 'machakann/vim-swap'
 Plug 'sheerun/vim-polyglot'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
-" Setup fzf
-Plug '/usr/local/opt/fzf'
-Plug '~/.fzf'
-Plug 'junegunn/fzf.vim'
 
 " Git plugins
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -48,7 +43,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " Erlang plugins
-Plug 'vim-erlang/vim-erlang-tags'         , { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-omnicomplete' , { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-compiler'     , { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-runtime'      , { 'for': 'erlang' }

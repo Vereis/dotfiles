@@ -60,13 +60,13 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Always have the following plugins (and updated)
 let g:coc_global_extensions = [
+  \ 'coc-elixir',
   \ 'coc-tsserver',
   \ 'coc-css',
   \ 'coc-json',
   \ 'coc-html',
   \ 'coc-vimlsp',
   \ 'coc-highlight',
-  \ 'coc-ember',
   \ 'coc-markdownlint',
   \ 'coc-tslint-plugin'
 \ ]
