@@ -31,11 +31,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-endwise'
 Plug 'machakann/vim-swap'
 Plug 'sheerun/vim-polyglot'
-Plug 'ctrlpvim/ctrlp.vim'
-
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 " Git plugins
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -56,6 +51,10 @@ Plug 'mustache/vim-mustache-handlebars' , { 'for': 'html' }
 
 " SCSS syntax highlighting
 Plug 'cakebaker/scss-syntax.vim' , { 'for': 'scss' }
+
+" FZF integration
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Bunch of nice themes
 Plug 'flazz/vim-colorschemes'
