@@ -23,14 +23,20 @@ call plug#begin(g:plugin_dir)
 
 " General stuff
 Plug 'scrooloose/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-endwise'
 Plug 'machakann/vim-swap'
 Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline'
+Plug 'junegunn/goyo.vim'
+
+" Language Server stuff
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'liuchengxu/vista.vim' " CTags for CoC language servers
 
 " Git plugins
 Plug 'Xuyuanp/nerdtree-git-plugin'
