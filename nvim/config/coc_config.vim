@@ -62,6 +62,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 let g:coc_global_extensions = [
   \ 'coc-elixir',
   \ 'coc-tsserver',
+  \ 'coc-prettier',
   \ 'coc-css',
   \ 'coc-json',
   \ 'coc-html',
