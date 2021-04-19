@@ -1,7 +1,15 @@
+" Allow navigation away from dirty files, keep dirty files in memory
+set hidden
+
 " Don't redraw buffer during macro
 set lazyredraw
 
-" Cache undos in a file
+" 8 line buffer for scrolling
+set scrolloff=8
+
+" Cache undos in a file, disable other backup settings
+set noswapfile
+set nobackup
 set undofile
 
 " Tab Settings
