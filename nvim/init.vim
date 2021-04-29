@@ -22,7 +22,6 @@ execute "set rtp^=" . g:plugin_dir
 call plug#begin(g:plugin_dir)
 
 " General stuff
-Plug 'scrooloose/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
@@ -33,6 +32,10 @@ Plug 'machakann/vim-swap'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/goyo.vim'
+
+" NERDTree stuff
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 
 " Language Server stuff
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

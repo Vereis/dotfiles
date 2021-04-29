@@ -1,5 +1,6 @@
 " NERDTREE toggle (normal mode)
-nnoremap <C-n> :NERDTreeToggle<CR>
+" Using NERDTreeTabs instead, syncs NERDTree state across all open tabs
+nnoremap <C-n> :NERDTreeTabsToggle<CR>
 
 " Close VIM if NERDTREE is only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -16,3 +17,6 @@ let g:NERDTreeQuitOnOpen = 1
 " Style
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+" Auto show open file when opening NERDTreeTabs
+let g:nerdtree_tabs_autofind = 1
