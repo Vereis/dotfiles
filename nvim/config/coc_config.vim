@@ -60,6 +60,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Always have the following plugins (and updated)
 let g:coc_global_extensions = [
+  \ 'coc-diagnostic',
   \ 'coc-elixir',
   \ 'coc-tsserver',
   \ 'coc-prettier',
@@ -73,13 +74,19 @@ let g:coc_global_extensions = [
 \ ]
 
 let g:coc_user_config = {
+  \ "diagnostic-languageserver.filetypes": {
+    \ "sh": "shellcheck"
+  \ },
+  \ "diagnostic-languageserver.formatFiletypes": {
+    \ "sh": "shfmt"
+  \ },
   \ "codeLens.enable": v:true,
   \ "elixirLS.dialyzerEnabled": v:false,
   \ "css.enable": v:true,
   \ "scss.validate": v:true,
   \ "tslint.jsEnable": v:true,
   \ "tslint.autoFixOnSave": v:true,
-  \ "coc.preferences.formatOnSaveFiletypes": ["css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "graphql", "jsx"],
+  \ "coc.preferences.formatOnSaveFiletypes": ["css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "graphql", "jsx", "sh"],
   \ "prettier.formatterPriority": 10,
   \ "prettier.onlyUseLocalVersion": v:true,
   \ "javascript.format.enabled": v:true
