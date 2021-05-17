@@ -80,6 +80,10 @@ let g:coc_user_config = {
   \ "diagnostic-languageserver.formatFiletypes": {
     \ "sh": "shfmt"
   \ },
+  \ "markdownlint.config": {
+    \ "default": v:true,
+    \ "line-length": v:false
+  \ },
   \ "codeLens.enable": v:true,
   \ "elixirLS.dialyzerEnabled": v:false,
   \ "css.enable": v:true,
