@@ -1,13 +1,17 @@
 function! LoadErlangSettings()
   let g:erl_textwidth=80
+  let &textwidth=g:erl_textwidth
+
+  set colorcolumn=+1
+
   set tabstop=2
   set softtabstop=2
   set shiftwidth=2
-  let &textwidth=g:erl_textwidth
+
   set expandtab
   set autoindent
+
   set fileformat=unix
-  set colorcolumn=+1
 endfunction
 
 " Set erlang mode in escripts with extension 'es'
