@@ -90,7 +90,7 @@ let g:coc_user_config = {
   \ "scss.validate": v:true,
   \ "tslint.jsEnable": v:true,
   \ "tslint.autoFixOnSave": v:true,
-  \ "coc.preferences.formatOnSaveFiletypes": ["css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "graphql", "jsx", "sh"],
+  \ "coc.preferences.formatOnSaveFiletypes": ["elixir", "erlang", "ex", "eex", "erl", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact", "graphql", "jsx", "sh"],
   \ "prettier.formatterPriority": 10,
   \ "prettier.onlyUseLocalVersion": v:true,
   \ "javascript.format.enabled": v:true
